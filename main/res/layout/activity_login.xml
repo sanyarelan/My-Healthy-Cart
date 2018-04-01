@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.hackproject.LoginActivity">
+
+    <SurfaceView
+        android:id="@+id/sv_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dip" />
+
+    <FrameLayout
+        android:id="@+id/frag_container_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:paddingRight="50dp"
+         android:paddingLeft="50dp"
+         android:background="@android:color/transparent">
+         <ImageView
+             android:id="@+id/iv_logo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@android:drawable/alert_light_frame"/>
+ 
+         <android.support.design.widget.TextInputLayout
+             android:id="@+id/til_member_name"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp">
+ 
+             <EditText
+                 android:id="@+id/et_member_name"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:focusableInTouchMode="true"
+                 android:inputType="text"
+                 android:textColor="@android:color/black"
+                 android:textColorHint="@android:color/black"
+                 android:hint="Member Name"/>
+ 
+         </android.support.design.widget.TextInputLayout>
+ 
+         <android.support.design.widget.TextInputLayout
+             android:id="@+id/til_password"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/til_member_name"
+             android:layout_marginTop="10dp">
+
+             <EditText
+                 android:id="@+id/et_password"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="textPassword"
+                 android:textColor="@android:color/black"
+                 android:textColorHint="@android:color/black"
+                 android:hint="Password"/>
+                 
+         </android.support.design.widget.TextInputLayout>
+
+         <Button
+             android:id="@+id/btn_login"
+             style="@style/login_view_layout_btn"
+             android:onClick="onLoginTap"
+             android:text="LOGIN" />
+     </LinearLayout>
+
+
+</FrameLayout>
+
